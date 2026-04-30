@@ -8,76 +8,92 @@
 </head>
 <body>
 
-    <div class="navbar">
+    <header class="navbar">
 
         <img class="logo" src="img/logo.png" alt="Logo">
         <h1 class="name"> 
             <span>Ace </span>
             <span class="surname">Eufracio</span>
         </h1>
-        <div class="nav-item">
-            <input type="text" placeholder="Search">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-item" id="nav-menu">
             
-            <button id="homeBtn">Home</button>
-            <button id="projectsBtn">Projects</button>
-            <button id="skillsBtn">Skills</button>
-            <button id="contactBtn">Contact</button>
-        </div>
-    </div>
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <div class="main" id="hero">
+    <section class="main" id="hero">
         <div class="left">
             <h1 class="intro">
                 <span>Hello, I'm Ace.</span>
-                <span>I'm a Website</span>
+                <span>Frontend Web</span>
                 <span>Developer</span>
             </h1>
-            <p>This is a simple webpage created using HTML, CSS, and JavaScript. It serves as a platform to share information about myself, my interests, and my work.</p>
+            <p>I build clean, responsive websites with modern HTML, CSS, and JavaScript. I focus on usability, performance, and polished design.</p>
         </div>
 
         <div class="right">
             <img class="profile-pic" src="img/profile.png" alt="Profile Picture">
         </div>
-    </div>
+    </section>
 
-    <div class="project-section" id="projects">
+    <section class="project-section" id="projects">
         <div class="project-container">
-            <h2 class="project-title">PROJECTS</h2>
+            <h2 class="project-title">Featured Projects</h2>
             <div class="carousel">
                 <div class="carousel-track">
 
                     <div class="project-card">
-                        <div class="card-inner">Project 1</div>
+                        <div class="card-inner">
+                            <h3>Project 1</h3>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="card-inner">Project 2</div>
+                        <div class="card-inner">
+                            <h3>Project 2</h3>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="card-inner">Project 3</div>
-                    </div>
-
-                    <!-- DUPLICATE -->
-                    <div class="project-card">
-                        <div class="card-inner">Project 1</div>
+                        <div class="card-inner">
+                            <h3>Project 3</h3>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="card-inner">Project 2</div>
+                        <div class="card-inner">
+                            <h3>Project 1</h3>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="card-inner">Project 3</div>
+                        <div class="card-inner">
+                            <h3>Project 2</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <h3>Project 3</h3>
+                        </div>
                     </div>
 
                 </div>
             </div> 
         </div>
-    </div>
+    </section>
 
-    <div class="skills-section" id="skills">
-        <h2 class="skills-title">SKILLS</h2>
+    <section class="skills-section" id="skills">
+        <h2 class="skills-title">Skills</h2>
 
         <div class="skills-container">
 
@@ -102,18 +118,18 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
-    <div class="about-section" id="about">
-        <h2 class="about-title">ABOUT ME</h2>
+    <section class="about-section" id="about">
+        <h2 class="about-title">About Me</h2>
         <p>
-            I'm a student and aspiring web developer who enjoys building clean,
-            responsive websites and learning new technologies.
+             I'm a student web developer passionate about building clean, responsive websites 
+             and constantly improving my skills through real projects and learning new technologies.
         </p>
-    </div>
+    </section>
 
-    <div class="contact-section" id="contact">
-        <h2 class="contact-title">CONTACT</h2>
+    <section class="contact-section" id="contact">
+        <h2 class="contact-title">Contact</h2>
 
         <div class="contact-container" id="gmail">
             <img src="img/gmail.png" alt="Gmail">
@@ -124,7 +140,17 @@
             <img src="img/github.png" alt="GitHub">
             <p>github.com/Aceuzc</p>
         </div>
-    </div>
+
+        <div class="contact-container" id="facebook">
+            <img src="img/facebook.png" alt="Facebook">
+            <p>facebook.com</p>
+        </div>
+        
+    </section>
+    
+    <footer class="site-footer">
+        <p>&copy; 2026 Ace Eufracio. Designed for clarity and usability.</p>
+    </footer>
     
     <script src="script.js"></script>
 </body>
