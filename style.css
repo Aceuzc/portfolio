@@ -114,7 +114,7 @@ input {
     font-size: 50px;
 }
 
-p{
+.left p{
     font-size: 18px;
     line-height: 1.6;
     padding-left: 100px;
@@ -253,6 +253,35 @@ p{
     transform: scale(1.1);
 }
 
+.about-section {
+    padding: 60px 10%;
+}
+
+
+.contact-section {
+    padding: 60px 10%;
+}
+
+.contact-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px 0px;
+
+    cursor: pointer;
+}
+
+.contact-container img{
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-container p{
+    font-size: 16px;
+    margin: 0;
+    color: blue;
+}
+
 @media (max-width: 1024px) {
     .skills-container {
         grid-template-columns: repeat(3, 1fr);
@@ -264,17 +293,6 @@ p{
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-.about-section {
-    padding: 60px 10%;
-}
-
-
-.contact-section {
-    padding: 60px 10%;
-}
-
 
 @media (max-width: 768px) {
     /* Navbar adjustments */

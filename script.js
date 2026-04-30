@@ -25,3 +25,12 @@ document.getElementById("contactBtn").addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+
+document.getElementById("gmail").addEventListener("click", () => {
+    window.location.href = "https://mail.google.com/";
+});
+
+document.getElementById("github").addEventListener("click", () => {
+    window.open("https://github.com/Aceuzc", "_blank");
+});
