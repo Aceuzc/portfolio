@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Ace Eufracio — Frontend Web Developer building clean, responsive websites with HTML, CSS, and JavaScript.">
+    <title>Ace Eufracio | Frontend Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
 
-        <img class="logo" src="img/logo.png" alt="Logo">
-        <h1 class="name"> 
+        <img class="logo" src="img/logo.png" alt="Ace Eufracio Logo">
+        <div class="name" aria-label="Ace Eufracio"> 
             <span>Ace </span>
             <span class="surname">Eufracio</span>
-        </h1>
-        <button class="hamburger" id="hamburger">
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
@@ -41,7 +45,7 @@
         </div>
 
         <div class="right">
-            <img class="profile-pic" src="img/profile.png" alt="Profile Picture">
+            <img class="profile-pic" src="img/profile.png" alt="Profile Picture of Ace Eufracio">
         </div>
     </section>
 
@@ -131,25 +135,61 @@
     <section class="contact-section" id="contact">
         <h2 class="contact-title">Contact</h2>
 
-        <div class="contact-container" id="gmail">
+        <a class="contact-container" id="gmail" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
             <img src="img/gmail.png" alt="Gmail">
             <p>aceeufracio23@email.com</p>
-        </div>
+        </a>
 
-        <div class="contact-container" id="github">
+        <a class="contact-container" id="github" href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer">
             <img src="img/github.png" alt="GitHub">
             <p>github.com/Aceuzc</p>
-        </div>
+        </a>
 
-        <div class="contact-container" id="facebook">
+        <a class="contact-container" id="facebook" href="https://www.facebook.com/share/18c7AZoUZk/" target="_blank" rel="noopener noreferrer">
             <img src="img/facebook.png" alt="Facebook">
             <p>facebook.com</p>
-        </div>
+        </a>
         
     </section>
     
     <footer class="site-footer">
-        <p>&copy; 2026 Ace Eufracio. Designed for clarity and usability.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img class="footer-logo" src="img/logo.png" alt="Logo">
+                <h3>Ace <span>Eufracio</span></h3>
+                <p>Frontend Web Developer building clean, responsive websites with modern technologies.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Connect</h4>
+                <div class="footer-social-icons">
+                    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                        <img src="img/gmail.png" alt="Gmail">
+                    </a>
+                    <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="img/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.facebook.com/share/18c7AZoUZk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ace Eufracio. Designed for clarity and usability.</p>
+        </div>
     </footer>
     
     <script src="script.js"></script>
