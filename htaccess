@@ -1,0 +1,17 @@
+# Disable directory listing (no one can browse your folders)
+Options -Indexes
+
+# Block direct access to the docs folder
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Allow only the download button link (referrer from your own site)
+    RewriteCond %{HTTP_REFERER} !^https://yourdomain\.com [NC]
+    RewriteRule ^assets/docs/.*\.pdf$ - [F,L]
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>

@@ -5,157 +5,322 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ace Eufracio — Frontend Web Developer building clean, responsive websites with HTML, CSS, and JavaScript.">
     <title>Ace Eufracio | Frontend Web Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
+    <!-- ── NAVBAR ── -->
+    <header class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">
+            <img class="logo" src="assets/img/logo.png" alt="Ace Eufracio Logo">
+            <div class="name">
+                <span>Ace</span>
+                <span class="surname">Eufracio</span>
+            </div>
+        </a>
 
-        <img class="logo" src="img/logo.png" alt="Ace Eufracio Logo">
-        <div class="name" aria-label="Ace Eufracio"> 
-            <span>Ace </span>
-            <span class="surname">Eufracio</span>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav class="nav-item" id="nav-menu">
-            
-            <a href="#hero">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+
+        <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#certificates" class="nav-link">Certificates</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
-    <section class="main" id="hero">
-        <div class="left">
-            <h1 class="intro">
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+        <div class="hero-left reveal">
+            <h1 class="hero-heading">
                 <span>Hello, I'm Ace.</span>
-                <span>Frontend Web</span>
-                <span>Developer</span>
+                <span class="hero-title-accent">Frontend</span>
+                <span>Web Developer</span>
             </h1>
-            <p>I build clean, responsive websites with modern HTML, CSS, and JavaScript. I focus on usability, performance, and polished design.</p>
+            <p class="hero-desc">I build clean, responsive websites with modern HTML, CSS, and JavaScript. I focus on usability, performance, and polished design.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="assets/docs/resume.pdf" download class="btn btn-outline">Download CV ↓</a>
+            </div>
         </div>
 
-        <div class="right">
-            <img class="profile-pic" src="img/profile.png" alt="Profile Picture of Ace Eufracio">
-        </div>
-    </section>
-
-    <section class="project-section" id="projects">
-        <div class="project-container">
-            <h2 class="project-title">Featured Projects</h2>
-            <div class="carousel">
-                <div class="carousel-track">
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 1</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 2</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 3</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 1</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 2</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <h3>Project 3</h3>
-                        </div>
-                    </div>
-
-                </div>
-            </div> 
+        <div class="hero-right reveal reveal-delay-1">
+            <div class="hero-img-wrap">
+                <img class="profile-pic" src="assets/img/profile.png" alt="Profile Picture of Ace Eufracio">
+            </div>
         </div>
     </section>
 
+    <!-- ── PROJECTS ── -->
+    <section class="projects-section" id="projects">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-sub">A selection of things I've built. Each project is linked to its GitHub repo and live demo.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card reveal">
+                    <div class="project-thumb project-thumb--1">
+                        <div class="project-thumb-label">🌤️ Weather App</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-name">Weather Dashboard</h3>
+                        <p class="project-desc">A real-time weather app that fetches live data from the OpenWeatherMap API. Search any city and get current conditions, humidity, and wind speed.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
+                            <a href="https://weather-app-mu-ten-10.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link project-link--live">Live Demo ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal-delay-1">
+                    <div class="project-thumb project-thumb--2">
+                        <div class="project-thumb-label">✅ Task Manager</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-name">Task Manager App</h3>
+                        <p class="project-desc">A clean to-do app with local storage persistence. Create, complete, and delete tasks that stay saved between sessions.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">LocalStorage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link project-link--live">Live Demo ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal-delay-2">
+                    <div class="project-thumb project-thumb--3">
+                        <div class="project-thumb-label">🌐 Portfolio</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-name">Developer Portfolio</h3>
+                        <p class="project-desc">This portfolio site. Built from scratch with vanilla HTML, CSS, and JavaScript. Fully responsive with scroll animations and a clean layout.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link project-link--live">Live Demo ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
     <section class="skills-section" id="skills">
-        <h2 class="skills-title">Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">
-                <img src="img/html.png" alt="HTML">
-                <span>HTML</span>
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-sub">Technologies and tools I work with regularly.</p>
             </div>
 
-            <div class="skill">
-                <img src="img/css.png" alt="CSS">
-                <span>CSS</span>
+            <div class="skills-grid">
+                <div class="skill reveal">
+                    <img src="assets/img/html.png" alt="HTML5">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill reveal reveal-delay-1">
+                    <img src="assets/img/css.png" alt="CSS3">
+                    <span>CSS3</span>
+                </div>
+                <div class="skill reveal reveal-delay-2">
+                    <img src="assets/img/js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill reveal">
+                    <img src="assets/img/node.png" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="skill reveal reveal-delay-1">
+                    <img src="assets/img/github.png" alt="GitHub">
+                    <span>GitHub</span>
+                </div>
+                <div class="skill reveal reveal-delay-2">
+                    <!-- Simple responsive design icon inline -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="2" y="6" width="36" height="24" rx="3" stroke="#2563EB" stroke-width="2.5" fill="none"/>
+                        <rect x="12" y="32" width="16" height="2.5" rx="1" fill="#2563EB"/>
+                        <rect x="7" y="11" width="26" height="14" rx="2" fill="#2563EB" opacity="0.15"/>
+                        <path d="M16 17l-4 4 4 4M24 17l4 4-4 4" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Responsive</span>
+                </div>
+                <div class="skill reveal">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="4" y="4" width="32" height="32" rx="4" fill="#2563EB" opacity="0.1"/>
+                        <path d="M12 20h16M12 14h10M12 26h14" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="30" cy="14" r="4" fill="#2563EB"/>
+                    </svg>
+                    <span>Git</span>
+                </div>
+                <div class="skill reveal reveal-delay-1">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="20" r="16" stroke="#2563EB" stroke-width="2.5" fill="none"/>
+                        <path d="M20 4C20 4 10 14 10 20C10 26 14.48 31 20 31C25.52 31 30 26 30 20C30 14 20 4 20 4Z" fill="#2563EB" opacity="0.15"/>
+                        <path d="M4 20h32M20 4C16 10 14 14 14 20s2 10 6 16M20 4c4 6 6 10 6 16s-2 10-6 16" stroke="#2563EB" stroke-width="2" fill="none"/>
+                    </svg>
+                    <span>Web APIs</span>
+                </div>
             </div>
-
-            <div class="skill">
-                <img src="img/js.png" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-
-            <div class="skill">
-                <img src="img/node.png" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-
         </div>
     </section>
 
+    <!-- ── ABOUT ── -->
     <section class="about-section" id="about">
-        <h2 class="about-title">About Me</h2>
-        <p>
-             I'm a student web developer passionate about building clean, responsive websites 
-             and constantly improving my skills through real projects and learning new technologies.
-        </p>
+        <div class="section-inner about-inner">
+            <div class="about-text reveal">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm a student web developer based in the Philippines, passionate about building clean, responsive websites and web applications. I'm currently sharpening my skills in frontend development through real projects and self-driven learning.</p>
+                <p>My goal is to create digital experiences that are not only functional but genuinely enjoyable to use — where good design meets solid code.</p>
+                <p>When I'm not coding, I'm exploring new web technologies, contributing to open-source, or leveling up through online courses and challenges.</p>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Coffee Consumed</span>
+                    </div>
+                </div>
+
+                <div class="about-learning">
+                    <h3>Currently Learning</h3>
+                    <div class="learning-tags">
+                        <span class="tag tag--learning">React.js</span>
+                        <span class="tag tag--learning">TypeScript</span>
+                        <span class="tag tag--learning">Tailwind CSS</span>
+                        <span class="tag tag--learning">Next.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ── CERTIFICATES ── -->
+    <section class="certs-section" id="certificates">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <h2 class="section-title">Certificates</h2>
+                <p class="section-sub">Credentials I've earned through self-learning and online platforms.</p>
+            </div>
+
+            <div class="certs-grid">
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon">🏅</div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">freeCodeCamp</span>
+                        <h3 class="cert-name">Responsive Web Design</h3>
+                        <p class="cert-desc">Covers HTML, CSS, Flexbox, Grid, and accessibility fundamentals.</p>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card reveal reveal-delay-1">
+                    <div class="cert-icon">🏅</div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">freeCodeCamp</span>
+                        <h3 class="cert-name">JavaScript Algorithms & Data Structures</h3>
+                        <p class="cert-desc">Covers ES6, functional programming, OOP, and basic algorithms.</p>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card reveal reveal-delay-2">
+                    <div class="cert-icon">🏅</div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">The Odin Project</span>
+                        <h3 class="cert-name">Foundations Path</h3>
+                        <p class="cert-desc">Full-stack foundations: HTML, CSS, JavaScript, Git, and the command line.</p>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
     <section class="contact-section" id="contact">
-        <h2 class="contact-title">Contact</h2>
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-sub">Have a project in mind or just want to say hi? My inbox is always open.</p>
+            </div>
 
-        <a class="contact-container" id="gmail" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
-            <img src="img/gmail.png" alt="Gmail">
-            <p>aceeufracio23@email.com</p>
-        </a>
+            <div class="contact-links reveal">
+                <a class="contact-item" href="mailto:aceeufracio23@gmail.com" aria-label="Send email">
+                    <img src="assets/img/gmail.png" alt="">
+                    <div class="contact-item-text">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-val">aceeufracio23@gmail.com</span>
+                    </div>
+                </a>
 
-        <a class="contact-container" id="github" href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer">
-            <img src="img/github.png" alt="GitHub">
-            <p>github.com/Aceuzc</p>
-        </a>
+                <a class="contact-item" href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">
+                    <img src="assets/img/github.png" alt="">
+                    <div class="contact-item-text">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-val">github.com/Aceuzc</span>
+                    </div>
+                </a>
 
-        <a class="contact-container" id="facebook" href="https://www.facebook.com/share/18c7AZoUZk/" target="_blank" rel="noopener noreferrer">
-            <img src="img/facebook.png" alt="Facebook">
-            <p>facebook.com</p>
-        </a>
-        
+                <a class="contact-item" href="https://www.facebook.com/share/18c7AZoUZk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook profile">
+                    <img src="assets/img/facebook.png" alt="">
+                    <div class="contact-item-text">
+                        <span class="contact-label">Facebook</span>
+                        <span class="contact-val">Ace Eufracio</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
-    
+
+    <!-- ── FOOTER ── -->
     <footer class="site-footer">
-        <div class="footer-content">
+        <div class="footer-inner">
             <div class="footer-brand">
-                <img class="footer-logo" src="img/logo.png" alt="Logo">
+                <img class="footer-logo" src="assets/img/logo.png" alt="Logo">
                 <h3>Ace <span>Eufracio</span></h3>
                 <p>Frontend Web Developer building clean, responsive websites with modern technologies.</p>
             </div>
@@ -166,20 +331,21 @@
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#about">About</a>
+                <a href="#certificates">Certificates</a>
                 <a href="#contact">Contact</a>
             </div>
 
             <div class="footer-socials">
                 <h4>Connect</h4>
                 <div class="footer-social-icons">
-                    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Email">
-                        <img src="img/gmail.png" alt="Gmail">
+                    <a href="mailto:aceeufracio23@gmail.com" aria-label="Email">
+                        <img src="assets/img/gmail.png" alt="Gmail">
                     </a>
                     <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <img src="img/github.png" alt="GitHub">
+                        <img src="assets/img/github.png" alt="GitHub">
                     </a>
                     <a href="https://www.facebook.com/share/18c7AZoUZk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <img src="img/facebook.png" alt="Facebook">
+                        <img src="assets/img/facebook.png" alt="Facebook">
                     </a>
                 </div>
             </div>
@@ -191,7 +357,7 @@
             <p>&copy; 2026 Ace Eufracio. Designed for clarity and usability.</p>
         </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
