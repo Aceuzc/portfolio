@@ -2,16 +2,48 @@
    VARIABLES & RESET
 ══════════════════════════════════════════ */
 :root {
-    --accent:       #2563EB;
-    --accent-dark:  #1d4ed8;
-    --accent-light: #eff6ff;
-    --bg-main:      #f8fafc;
-    --bg-section:   #ffffff;
-    --bg-alt:       #f1f5f9;
-    --text:         #0f172a;
-    --text-muted:   #64748b;
-    --border:       #e2e8f0;
-    --radius:       14px;
+    --color-brand:       hsl(221, 83%, 53%);
+    --color-brand-light: hsl(214, 100%, 97%);
+    --color-brand-dark:  hsl(224, 76%, 48%);
+    --color-canvas:      hsl(210, 40%, 98%);
+    --color-surface:     hsl(0, 0%, 100%);
+    --color-overlay:     hsl(210, 40%, 96%);
+    --color-text-primary:   hsl(222, 47%, 11%);
+    --color-text-secondary: hsl(215, 16%, 47%);
+    --color-text-muted:     hsl(215, 20%, 65%);
+    --color-border:        hsl(214, 32%, 91%);
+    --color-border-strong: hsl(215, 20%, 65%);
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.09), 0 4px 8px rgba(0, 0, 0, 0.05);
+    --radius-xs:   4px;
+    --radius-sm:   6px;
+    --radius-md:   10px;
+    --radius-lg:   14px;
+    --radius-xl:   18px;
+    --radius-full: 9999px;
+    --transition-fast: 100ms ease;
+    --transition-base: 180ms ease;
+    --transition-slow: 320ms ease;
+    --text-xs:   11px;
+    --text-sm:   13px;
+    --text-base: 15px;
+    --text-md:   17px;
+    --text-lg:   20px;
+    --text-xl:   24px;
+    --text-2xl:  30px;
+    --text-3xl:  40px;
+    --accent:       var(--color-brand);
+    --accent-dark:  var(--color-brand-dark);
+    --accent-light: var(--color-brand-light);
+    --bg-main:      var(--color-canvas);
+    --bg-section:   var(--color-surface);
+    --bg-alt:       var(--color-overlay);
+    --text:         var(--color-text-primary);
+    --text-muted:   var(--color-text-secondary);
+    --border:       var(--color-border);
+    --radius:       var(--radius-lg);
     --nav-height:   72px;
     --section-pad:  80px 6%;
 }
@@ -602,7 +634,20 @@ a {
 }
 
 .cert-icon {
-    font-size: 28px;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
     line-height: 1;
 }
 
