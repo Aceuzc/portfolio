@@ -253,7 +253,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 10. 3D card tilt
+    // 10. Featured case study pointer motion
+    const featuredCase = document.querySelector(".featured-case-study");
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+    if (featuredCase && !reduceMotion && finePointer) {
+        let caseRaf;
+
+        featuredCase.addEventListener("pointermove", e => {
+            cancelAnimationFrame(caseRaf);
+            caseRaf = requestAnimationFrame(() => {
+                const r = featuredCase.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width;
+                const y = (e.clientY - r.top) / r.height;
+                const tiltY = (x - 0.5) * 7;
+                const tiltX = (0.5 - y) * 5;
+
+                featuredCase.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+                featuredCase.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+                featuredCase.style.setProperty("--glare-x", `${(x * 100).toFixed(1)}%`);
+                featuredCase.style.setProperty("--glare-y", `${(y * 100).toFixed(1)}%`);
+            });
+        });
+
+        featuredCase.addEventListener("pointerleave", () => {
+            cancelAnimationFrame(caseRaf);
+            featuredCase.style.setProperty("--tilt-x", "0deg");
+            featuredCase.style.setProperty("--tilt-y", "0deg");
+            featuredCase.style.setProperty("--glare-x", "50%");
+            featuredCase.style.setProperty("--glare-y", "35%");
+        });
+    }
+
+
+    // 11. 3D card tilt
     if (!reduceMotion) {
         document.querySelectorAll(".project-card").forEach(card => {
             card.addEventListener("mousemove", e => {
@@ -272,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 11. Copy email
+    // 12. Copy email
     const copyBtn = document.getElementById("copy-email-btn");
     if (copyBtn) {
         const toast = document.createElement("div");
@@ -298,7 +331,52 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 12. Back to top
+    // 13. Case study modal
+    const caseStudyModal = document.getElementById("weather-case-study");
+    const openCaseStudy = document.getElementById("open-case-study");
+    const closeCaseStudy = document.getElementById("close-case-study");
+    let lastCaseStudyTrigger = null;
+
+    function openCaseStudyModal() {
+        if (!caseStudyModal) return;
+
+        lastCaseStudyTrigger = document.activeElement;
+
+        if (typeof caseStudyModal.showModal === "function") {
+            caseStudyModal.showModal();
+        } else {
+            caseStudyModal.setAttribute("open", "");
+        }
+
+        document.body.classList.add("modal-open");
+    }
+
+    function closeCaseStudyModal() {
+        if (!caseStudyModal || !caseStudyModal.open) return;
+        caseStudyModal.close();
+    }
+
+    if (caseStudyModal && openCaseStudy && closeCaseStudy) {
+        openCaseStudy.addEventListener("click", openCaseStudyModal);
+        closeCaseStudy.addEventListener("click", closeCaseStudyModal);
+
+        caseStudyModal.addEventListener("click", e => {
+            if (e.target === caseStudyModal) {
+                closeCaseStudyModal();
+            }
+        });
+
+        caseStudyModal.addEventListener("close", () => {
+            document.body.classList.remove("modal-open");
+
+            if (lastCaseStudyTrigger && typeof lastCaseStudyTrigger.focus === "function") {
+                lastCaseStudyTrigger.focus({ preventScroll: true });
+            }
+        });
+    }
+
+
+    // 14. Back to top
     const backToTop = document.getElementById("back-to-top");
 
     if (backToTop) {

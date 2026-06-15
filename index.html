@@ -85,41 +85,79 @@
     <section class="projects-section" id="projects">
         <div class="section-inner">
             <div class="section-header reveal">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-sub">Three focused builds showing API integration, local data persistence, responsive navigation, and vanilla JavaScript UI work.</p>
+                <span class="section-kicker">Selected work</span>
+                <h2 class="section-title">Proof-led frontend projects</h2>
+                <p class="section-sub">A focused look at shipped browser work: live data, responsive UI, interaction details, and clear project decisions.</p>
             </div>
 
-            <div class="projects-grid">
+            <article class="featured-case-study reveal">
+                <div class="case-copy">
+                    <div class="case-meta">
+                        <span>Featured build</span>
+                        <span>Vanilla JavaScript</span>
+                    </div>
+                    <h3>Panahon PH Weather Dashboard</h3>
+                    <p class="case-lede">A live weather interface for Philippine cities with search, unit switching, a city watchlist, and a map-first dashboard layout.</p>
 
-                <article class="project-card reveal">
-                    <div class="project-thumb project-thumb--1">
-                        <span class="project-live-badge">Live &#8599;</span>
-                        <div class="project-thumb-label">API Weather</div>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-name">Weather Dashboard</h3>
-                        <p class="project-desc">A weather dashboard that pulls live OpenWeatherMap data, handles city search, and presents current conditions, humidity, and wind speed in a compact layout.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">REST API</span>
+                    <div class="case-points" aria-label="Project highlights">
+                        <div>
+                            <span class="case-point-label">Problem</span>
+                            <p>Make weather data easier to scan on desktop while keeping mobile city lookup fast.</p>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &#8594;</a>
-                            <a href="https://weather-app-mu-ten-10.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link project-link--live">Live Demo &#8599;</a>
+                        <div>
+                            <span class="case-point-label">Build</span>
+                            <p>Connected API data, map context, saved locations, and responsive weather cards.</p>
+                        </div>
+                        <div>
+                            <span class="case-point-label">Polish</span>
+                            <p>Dark weather-station styling, high-contrast states, and compact forecast hierarchy.</p>
                         </div>
                     </div>
-                </article>
+
+                    <div class="case-stack">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Responsive UI</span>
+                    </div>
+
+                    <div class="case-actions">
+                        <a href="https://weather-app-mu-ten-10.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Project</a>
+                        <button class="btn btn-outline case-study-trigger" id="open-case-study" type="button">Read Case Study</button>
+                        <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Source</a>
+                    </div>
+                </div>
+
+                <a class="case-visual" href="https://weather-app-mu-ten-10.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Panahon PH live project">
+                    <div class="case-browser-bar" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <strong>weather-app-mu-ten-10.vercel.app</strong>
+                    </div>
+                    <div class="case-screen">
+                        <img src="assets/img/weather-dashboard.png" alt="Panahon PH weather dashboard interface showing current conditions, map, and city watchlist">
+                        <span class="case-live-pill">Live project</span>
+                    </div>
+                </a>
+            </article>
+
+            <div class="supporting-projects">
 
                 <article class="project-card reveal reveal-delay-1">
-                    <div class="project-thumb project-thumb--2">
-                        <span class="project-live-badge">Live &#8599;</span>
-                        <div class="project-thumb-label">Local Tasks</div>
+                    <div class="project-card-top">
+                        <span class="project-type">Local app</span>
+                        <span class="project-index">01</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Task Manager App</h3>
                         <p class="project-desc">A browser-based task tracker with localStorage persistence, completion states, and a focused flow for adding, finishing, and removing tasks.</p>
+                        <div class="project-proof">
+                            <span>Local data</span>
+                            <span>Task states</span>
+                            <span>CRUD flow</span>
+                        </div>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
@@ -134,13 +172,18 @@
                 </article>
 
                 <article class="project-card reveal reveal-delay-2">
-                    <div class="project-thumb project-thumb--3">
-                        <span class="project-live-badge">Live &#8599;</span>
-                        <div class="project-thumb-label">Portfolio Build</div>
+                    <div class="project-card-top">
+                        <span class="project-type">Portfolio system</span>
+                        <span class="project-index">02</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Developer Portfolio</h3>
                         <p class="project-desc">The site you are viewing: hand-coded sections, mobile navigation, scroll reveal behavior, and reusable CSS patterns without a framework.</p>
+                        <div class="project-proof">
+                            <span>Responsive nav</span>
+                            <span>Motion system</span>
+                            <span>Accessible states</span>
+                        </div>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
@@ -328,7 +371,7 @@
 
                 <!-- TODO: replace href with LinkedIn URL -->
                 <a class="contact-item" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
-                    <img src="assets/img/facebook.png" alt="">
+                    <img src="assets/img/linkedin.svg" alt="">
                     <div class="contact-item-text">
                         <span class="contact-label">LinkedIn</span>
                         <span class="contact-val">LinkedIn</span>
@@ -368,7 +411,7 @@
                     </a>
                     <!-- TODO: replace href with LinkedIn URL -->
                     <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="assets/img/facebook.png" alt="LinkedIn">
+                        <img src="assets/img/linkedin.svg" alt="LinkedIn">
                     </a>
                 </div>
             </div>
@@ -380,6 +423,81 @@
             <p>&copy; 2026 Ace Eufracio &mdash; Designed with intention. <a href="https://github.com/Aceuzc" style="color: var(--accent-light)">View source &#8594;</a></p>
         </div>
     </footer>
+
+    <dialog class="case-study-modal" id="weather-case-study" aria-labelledby="weather-case-title">
+        <div class="case-study-shell">
+            <button class="case-study-close" id="close-case-study" type="button" aria-label="Close case study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <div class="case-study-hero">
+                <div class="case-study-hero-copy">
+                    <span class="case-study-label">Case Study</span>
+                    <h2 id="weather-case-title">Panahon PH Weather Dashboard</h2>
+                    <p>A live weather dashboard built to make Philippine city conditions easier to search, compare, and scan across devices.</p>
+                    <div class="case-study-actions">
+                        <a href="https://weather-app-mu-ten-10.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Live Demo</a>
+                        <a href="https://github.com/Aceuzc" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View GitHub</a>
+                    </div>
+                </div>
+
+                <div class="case-study-preview">
+                    <img src="assets/img/weather-dashboard.png" alt="Panahon PH dashboard showing weather conditions, map view, and city watchlist">
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <section class="case-study-panel case-study-summary">
+                    <div>
+                        <span>Role</span>
+                        <strong>Frontend developer</strong>
+                    </div>
+                    <div>
+                        <span>Stack</span>
+                        <strong>HTML, CSS, JavaScript, REST API</strong>
+                    </div>
+                    <div>
+                        <span>Focus</span>
+                        <strong>Search, weather data, responsive UI</strong>
+                    </div>
+                </section>
+
+                <section class="case-study-section">
+                    <h3>Project Problem</h3>
+                    <p>Most beginner weather projects show one city at a time. I wanted this version to feel closer to a real utility: fast city lookup, visible current conditions, map context, and a watchlist for common Philippine cities.</p>
+                </section>
+
+                <section class="case-study-grid">
+                    <div class="case-study-section">
+                        <h3>What I Built</h3>
+                        <ul>
+                            <li>City search flow for Philippine locations.</li>
+                            <li>Current condition cards for temperature, humidity, wind, pressure, and visibility.</li>
+                            <li>Map-focused layout with a live location marker.</li>
+                            <li>Watchlist view for quickly comparing major cities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Technical Decisions</h3>
+                        <ul>
+                            <li>Kept the interface in vanilla JavaScript to prove DOM and API fundamentals.</li>
+                            <li>Used compact weather cards so the dashboard stays scannable on smaller screens.</li>
+                            <li>Designed dark surfaces around blue weather-map tones for a consistent product feel.</li>
+                            <li>Separated proof points from stack tags so the project reads as outcome-led.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="case-study-section case-study-outcome">
+                    <h3>What This Shows</h3>
+                    <p>This project demonstrates API integration, interface hierarchy, responsive dashboard layout, and practical UX decisions. It gives visitors a clearer picture of how I think through a project, not only what the final screen looks like.</p>
+                </section>
+            </div>
+        </div>
+    </dialog>
 
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
