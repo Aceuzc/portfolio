@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const roleWord = document.getElementById("role-word");
 
     if (roleWord && !reduceMotion) {
-        const roles = ["Frontend", "UI-Focused", "JavaScript"];
+        const roles = ["Philippine-Based", "Vanilla JS", "Detail-First"];
         let roleIdx = 0, charIdx = 0, deleting = false;
 
         function tick() {
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(step);
     }
 
-    const statNums = document.querySelectorAll(".stat-num");
+    const statNums = document.querySelectorAll(".stat-num[data-target]");
 
     if (reduceMotion) {
         statNums.forEach(el => {
