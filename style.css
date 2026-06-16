@@ -247,9 +247,17 @@ a {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid var(--border-hover);
+    object-fit: contain;
+    border: 1px solid var(--accent-border);
     background: var(--bg-raised);
+    box-shadow: 0 0 0 3px rgba(124, 106, 247, 0.08);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.nav-brand:hover .logo {
+    border-color: rgba(168, 156, 249, 0.55);
+    box-shadow: 0 0 18px rgba(124, 106, 247, 0.18);
+    transform: translateY(-1px);
 }
 
 .name {
@@ -1520,8 +1528,10 @@ body.modal-open {
     height: 52px;
     border-radius: 50%;
     margin-bottom: 14px;
-    object-fit: cover;
-    border: 1px solid var(--border-hover);
+    object-fit: contain;
+    border: 1px solid var(--accent-border);
+    background: var(--bg-raised);
+    box-shadow: 0 0 0 3px rgba(124, 106, 247, 0.08);
 }
 
 .footer-brand h3 {
